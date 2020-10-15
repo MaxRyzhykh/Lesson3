@@ -1,9 +1,9 @@
 package com.company;
-
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-// 1-2 point
+    // 1-2 point
         int month = 12;
         if (0 < month && month < 3 || month == 12) {
             System.out.println("Зима");
@@ -14,7 +14,7 @@ public class Main {
         } else if (8 < month && month < 12) {
             System.out.println("Осень");
         } else System.out.println("Некорректное число месяца");
-// 3 point
+    // 3 point
         switch (month) {
             case 1:
             case 2:
@@ -40,12 +40,12 @@ public class Main {
                 System.out.println("Некорректное число месяца");
                 break;
         }
-// 4-5 point
+    // 4-5 point
         int array[] = {0,1,2,3,4,5,6,7,8,9};
         for (int i = (array.length)-1; i > -1; i--) {
             System.out.print(array[i] + " ");
         }
-// 6-7 point
+    // 6-7 point
         System.out.println();
         int[][] squareArray = new int[2][3];
         squareArray[0][0] = 11;
@@ -60,5 +60,15 @@ public class Main {
             }
             System.out.println();
         }
+    // factorial
+        System.out.print("Введите неотрицательное целое число для вычисления факториала: ");
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+
+        long factorial = 1;
+        for (int i = 1; i <= n;i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("n! = " + factorial);
     }
 }
