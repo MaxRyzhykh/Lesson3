@@ -60,7 +60,7 @@ public class Main {
             }
             System.out.println();
         }
-    // factorial
+    // factorial и back factorial
         System.out.print("Введите неотрицательное целое число для вычисления факториала: ");
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
@@ -70,5 +70,10 @@ public class Main {
             factorial = factorial * i;
         }
         System.out.println("n! = " + factorial);
+        long backfactorial = factorial;
+        for (long j = 1; j != backfactorial; j++) {
+            backfactorial = backfactorial / j;
+        }
+        System.out.println("n от !n = " + backfactorial);
     }
 }
